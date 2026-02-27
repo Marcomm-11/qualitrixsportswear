@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bottom Collection - Qualitrix</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+
+<!-- HEADER -->
+<header>
+    <div class="logo">
+        <div class="logo-circle">
+            <a href="index.html">
+                <img src="JerseyImages/logo.jpg" alt="Qualitrix Logo" class="logo-img">
+            </a>
+        </div>
+    </div>
+
+    <nav>
+        <ul>
+            <li><a href="top.html">Top</a></li>
+            <li><a href="bottom.html">Bottom</a></li>
+            <li><a href="#">Inquire</a></li>
+            <li><a href="#">Others</a></li>
+        </ul>
+    </nav>
+
+    <div class="user-actions">
+    <a href="#" class="cart-link" id="cartLink">
+        <i class="fas fa-shopping-cart"></i>
+        <span class="cart-text">Cart (<span id="cartCount">0</span>)</span>
+    </a>
+
+    <!-- Cart Dropdown -->
+    <div class="cart-dropdown" id="cartDropdown">
+        <h4>Your Cart</h4>
+        <div id="cartItems">
+            <!-- Dito lalabas ang mga items dynamically -->
+        </div>
+        <p class="cart-total" id="cartTotal">Total: ₱0</p>
+    </div>
+</div>
+</header>
+
+<!-- BOTTOM PAGE HERO -->
+<section class="hero" style="background-image: url('BottomImages/bottombackground.jpg'); height: 50vh;">
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+        <h1>BOTTOM COLLECTION</h1>
+        <p>Performance. Comfort. Strength.</p>
+    </div>
+</section>
+
+<!-- BOTTOM PRODUCTS -->
+<main class="container">
+    <div class="product-grid">
+
+    <a href="JerseyBottomFiles/WhiteShort.html" class="product-card">
+        <div class="product-image">
+            <img src="BottomImages/WhiteShort.jpg" alt="White Short Jersey">
+        </div>
+        <div class="product-info">
+            <h3>White Jersey Short</h3>
+            <p class="price">₱950</p>
+        </div>
+    </a>
+
+    <a href="JerseyBottomFiles/BlackShort.html" class="product-card">
+        <div class="product-image">
+            <img src="BottomImages/BlackShort.jpg" alt="Black Short Jersey">
+        </div>
+        <div class="product-info">
+            <h3>Black Short Jersey</h3>
+            <p class="price">₱850</p>
+        </div>
+    </a>
+
+    <a href="JerseyBottomFiles/BlueShort.html" class="product-card">
+        <div class="product-image">
+            <img src="BottomImages/BlueShort.jpg" alt="Blue Short Jersey">
+        </div>
+        <div class="product-info">
+            <h3>Blue Short Jersey</h3>
+            <p class="price">₱700</p>
+        </div>
+    </a>
+
+    <a href="JerseyBottomFiles/GreyShort.html" class="product-card">
+        <div class="product-image">
+            <img src="BottomImages/GreyShort.jpg" alt="Grey Short Jersey">
+        </div>
+        <div class="product-info">
+            <h3>Grey Short Jersey</h3>
+            <p class="price">₱1200</p>
+        </div>
+    </a>
+
+</div>
+
+<!-- CART FUNCTIONALITY -->
+<script src="../cart.js"></script> <!-- Shared cart JS -->
+</body>
+</html>

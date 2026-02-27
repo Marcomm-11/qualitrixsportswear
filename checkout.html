@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Checkout - Qualitrix</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="checkout.css">
+</head>
+<body>
+
+<header>
+    <h2 style="padding:20px;">Secure Checkout</h2>
+</header>
+
+<main class="checkout-container">
+
+    <!-- ORDER SUMMARY -->
+    <div class="order-summary">
+        <h3>Your Order</h3>
+        <div id="checkoutItems"></div>
+
+        <div class="summary-line">
+            <span>Subtotal:</span>
+            <span id="subtotal">₱0</span>
+        </div>
+
+        <div class="summary-line">
+            <span>Shipping:</span>
+            <span id="shippingFee">₱0</span>
+        </div>
+
+        <div class="summary-total">
+            <span>Total:</span>
+            <span id="checkoutTotal">₱0</span>
+        </div>
+    </div>
+
+    <!-- CUSTOMER INFO -->
+    <div class="checkout-form">
+        <h3>Customer Information</h3>
+
+        <input type="text" id="fullname" placeholder="Full Name" required>
+        <input type="text" id="address" placeholder="Full Address" required>
+        <input type="text" id="contact" placeholder="Contact Number" required>
+
+        <h4>Delivery Method</h4>
+        <select id="delivery">
+            <option value="standard">Standard (₱100)</option>
+            <option value="express">Express (₱200)</option>
+        </select>
+
+        <h4>Payment Method</h4>
+        <select id="payment">
+            <option value="cod">Cash on Delivery</option>
+            <option value="gcash">GCash</option>
+            <option value="paypal">PayPal</option>
+            <option value="card">Credit/Debit Card</option>
+            <option value="bank">Bank Transfer</option>
+        </select>
+
+        <!-- Payment instructions container -->
+        <div id="paymentDetails" class="payment-details">
+            <!-- Dynamic instructions will appear here -->
+        </div>
+
+        <button id="placeOrder">Place Order</button>
+    </div>
+
+</main>
+
+<!-- Success Modal -->
+<div id="successModal" class="modal">
+    <div class="modal-content">
+        <h2>🎉 Order Placed!</h2>
+        <p id="orderID"></p>
+        <button onclick="closeModal()">Close</button>
+    </div>
+</div>
+
+<script src="checkout.js"></script>
+</body>
+</html>

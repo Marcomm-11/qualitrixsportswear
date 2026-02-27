@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Westbrook Jersey - Qualitrix</title>
+    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="../product.css"> <!-- Product-specific styles -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <script src="..cart.js"></script>
+</head>
+<body>
+
+<!-- HEADER -->
+<header>
+    <div class="logo">
+        <div class="logo-circle">
+            <a href="../index.html">
+                <img src="../JerseyImages/logo.jpg" alt="Qualitrix Logo" class="logo-img">
+            </a>
+        </div>
+    </div>
+    <nav>
+        <ul>
+            <li><a href="../top.html">Top</a></li>
+            <li><a href="../bottom.html">Bottom</a></li>
+            <li><a href="#">Kids</a></li>
+            <li><a href="#">Baby</a></li>
+        </ul>
+    </nav>
+
+    <!-- Cart -->
+    <div class="user-actions" style="position:relative;">
+        <a href="#" class="cart-link" id="cartLink">
+            <i class="fas fa-shopping-cart"></i>
+            <span class="cart-text">Cart (<span id="cartCount">0</span>)</span>
+        </a>
+        <div class="cart-dropdown" id="cartDropdown">
+            <h4>Your Cart</h4>
+            <div id="cartItems"></div>
+            <p class="cart-total" id="cartTotal">Total: ₱0</p>
+        </div>
+    </div>
+</header>
+
+<!-- PRODUCT DETAIL -->
+<main class="container">
+    <div class="product-detail enhanced">
+
+        <!-- Left: Product Image -->
+        <div class="product-image">
+            <img src="../JerseyImages/westbrook.jpg" alt="Westbrook Jersey">
+        </div>
+
+        <!-- Right: Product Info -->
+        <div class="product-info">
+            <h1 class="product-title">Westbrook Jersey</h1>
+            <p class="price">₱950</p>
+            <p class="description">High-quality performance jersey designed for athletes. Engineered for comfort, breathability, and full range of movement.</p>
+
+            <!-- Size Selection -->
+            <div class="size-selection">
+                <p>Choose Size:</p>
+                <div class="sizes">
+                    <button class="size-btn">S</button>
+                    <button class="size-btn">M</button>
+                    <button class="size-btn">L</button>
+                    <button class="size-btn">XL</button>
+                </div>
+            </div>
+<script>
+let selectedSize = null;
+
+// Select size
+document.querySelectorAll(".size-btn").forEach(button => {
+    button.addEventListener("click", () => {
+        document.querySelectorAll(".size-btn").forEach(btn => btn.classList.remove("active"));
+        button.classList.add("active");
+        selectedSize = button.textContent;
+    });
+});
+</script>
+            <!-- Quantity -->
+            <div class="quantity-selection">
+                <p>Quantity:</p>
+                <input type="number" id="qty" name="qty" value="1" min="1">
+            </div>
+
+            <!-- Add to Cart -->
+            <button class="btn add-cart">Add to Cart</button>
+
+            <!-- Extra Info -->
+            <p class="extra-info">Free shipping on orders over ₱2000. Returns accepted within 14 days.</p>
+        </div>
+
+    </div>
+</main>
+
+<!-- CART FUNCTIONALITY -->
+<script src="../cart.js"></script> <!-- Shared cart JS -->
+</body>
+</html>
